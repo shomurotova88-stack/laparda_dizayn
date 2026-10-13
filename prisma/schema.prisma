@@ -1,0 +1,127 @@
+// Prisma Schema for LA PARDA (PostgreSQL / Supabase)
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  CUSTOMER
+  ADMIN
+}
+
+enum OrderStatus {
+  YANGI
+  QABUL_QILINDI
+  BOGLANILDI
+  OLCHOV_BELGILANDI
+  JARAYONDA
+  TAYYOR
+  BEKOR_QILINDI
+}
+
+enum DeliveryStatus {
+  PENDING
+  SENT
+  FAILED
+}
+
+model User {
+  id           String      @id @default(cuid())
+  phone        String      @unique
+  name         String
+  passwordHash String
+  role         Role        @default(CUSTOMER)
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime    @updatedAt
+  orders       Order[]
+  favorites    Favorite[]
+}
+
+model Order {
+  id                 String         @id @default(cuid())
+  orderNumber        String         @unique // e.g. LP-2026-0101
+  userId             String?
+  user               User?          @relation(fields: [userId], references: [id], onDelete: SetNull)
+  customerName       String
+  phone              String
+  serviceType        String         // tikish, yuvish, ornatish, olchov, karniz
+  projectId          String?
+  projectTitle       String?
+  district           String?        // Toshkent tumanlari
+  address            String?
+  windowCount        Int?           @default(1)
+  roomCount          Int?           @default(1)
+  dimensions         String?        // Taxminiy o'lchamlar
+  colorPreference    String?        // Istalgan rang yoki mato
+  fabricPreference   String?
+  budget             String?        // Taxminiy budjet
+  measurementDate    String?        // Qulay sana
+  measurementTime    String?        // Qulay vaqt
+  comment            String?
+  photoUrls          String?        // JSON string of uploaded photos or paths
+  isWashingService   Boolean        @default(false)
+  washingCurtainQty  Int?
+  washingNeedDismantle Boolean      @default(false)
+  status             OrderStatus    @default(YANGI)
+  telegramSent       Boolean        @default(false)
+  telegramMessageId  Int?
+  deliveryStatus     DeliveryStatus @default(PENDING)
+  deliveryError      String?
+  createdAt          DateTime       @default(now())
+  updatedAt          DateTime       @updatedAt
+  telegramLogs       TelegramLog[]
+}
+
+model Project {
+  id             String     @id @default(cuid())
+  slug           String     @unique
+  titleUz        String
+  titleRu        String
+  descriptionUz  String?
+  descriptionRu  String?
+  image          String
+  originalHeic   String?
+  video          String?
+  room           String     // mehmonxona, yotoqxona, oshxona, ofis
+  style          String     // neoklassika, modern, minimalizm
+  hasBeforeAfter Boolean    @default(false)
+  featured       Boolean    @default(false)
+  sortOrder      Int        @default(0)
+  active         Boolean    @default(true)
+  createdAt      DateTime   @default(now())
+  updatedAt      DateTime   @updatedAt
+  favorites      Favorite[]
+}
+
+model Favorite {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  projectId String
+  project   Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+
+  @@unique([userId, projectId])
+}
+
+model TelegramLog {
+  id        String   @id @default(cuid())
+  orderId   String?
+  order     Order?   @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  action    String   // SEND_ORDER, STATUS_UPDATE_CALLBACK, RETRY
+  status    String   // SUCCESS, FAILED
+  payload   String?  // JSON string
+  response  String?  // Telegram response or error
+  createdAt DateTime @default(now())
+}
+
+model SiteSetting {
+  id        String   @id @default(cuid())
+  key       String   @unique
+  value     String
+  updatedAt DateTime @updatedAt
+}

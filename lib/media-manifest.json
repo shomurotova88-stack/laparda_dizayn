@@ -1,0 +1,226 @@
+{
+  "version": "1.0.0",
+  "updatedAt": "2026-10-13T10:07:15.715Z",
+  "pages": {
+    "home": {
+      "heroImage": "/media/home/hero-curtains.jpg",
+      "heroVideo": "/media/videos/laparda6.MOV",
+      "videoPoster": "/media/projects/laparda2.jpg",
+      "featuredWorks": [
+        "/media/projects/laparda2.jpg",
+        "/media/projects/laparda3.jpg",
+        "/media/projects/laparda4.jpg",
+        "/media/projects/laparda5.jpg"
+      ]
+    },
+    "projects": {
+      "items": [
+        {
+          "id": "proj-1",
+          "titleUz": "Zamonaviy parda loyihasi #1",
+          "titleRu": "Современный проект штор #1",
+          "image": "/media/projects/laparda11.jpg",
+          "originalHeic": "/media/projects/laparda11.HEIC",
+          "video": "/media/videos/laparda6.MOV",
+          "room": "mehmonxona",
+          "style": "neoklassika",
+          "hasBeforeAfter": true
+        },
+        {
+          "id": "proj-2",
+          "titleUz": "Zamonaviy parda loyihasi #2",
+          "titleRu": "Современный проект штор #2",
+          "image": "/media/projects/laparda12.jpg",
+          "originalHeic": "/media/projects/laparda12.HEIC",
+          "video": "/media/videos/laparda10.MOV",
+          "room": "yotoqxona",
+          "style": "modern",
+          "hasBeforeAfter": false
+        },
+        {
+          "id": "proj-3",
+          "titleUz": "Zamonaviy parda loyihasi #3",
+          "titleRu": "Современный проект штор #3",
+          "image": "/media/projects/laparda13.jpg",
+          "originalHeic": "/media/projects/laparda13.HEIC",
+          "video": "/media/videos/video1.MOV",
+          "room": "oshxona",
+          "style": "minimalizm",
+          "hasBeforeAfter": true
+        },
+        {
+          "id": "proj-4",
+          "titleUz": "Zamonaviy parda loyihasi #4",
+          "titleRu": "Современный проект штор #4",
+          "image": "/media/projects/laparda14.jpg",
+          "originalHeic": "/media/projects/laparda14.HEIC",
+          "video": "/media/videos/video2.MOV",
+          "room": "ofis",
+          "style": "neoklassika",
+          "hasBeforeAfter": false
+        },
+        {
+          "id": "proj-5",
+          "titleUz": "Zamonaviy parda loyihasi #5",
+          "titleRu": "Современный проект штор #5",
+          "image": "/media/projects/laparda2.jpg",
+          "originalHeic": "/media/projects/laparda2.HEIC",
+          "video": null,
+          "room": "mehmonxona",
+          "style": "modern",
+          "hasBeforeAfter": false
+        },
+        {
+          "id": "proj-6",
+          "titleUz": "Zamonaviy parda loyihasi #6",
+          "titleRu": "Современный проект штор #6",
+          "image": "/media/projects/laparda3.jpg",
+          "originalHeic": "/media/projects/laparda3.HEIC",
+          "video": null,
+          "room": "yotoqxona",
+          "style": "minimalizm",
+          "hasBeforeAfter": false
+        },
+        {
+          "id": "proj-7",
+          "titleUz": "Zamonaviy parda loyihasi #7",
+          "titleRu": "Современный проект штор #7",
+          "image": "/media/projects/laparda4.jpg",
+          "originalHeic": "/media/projects/laparda4.HEIC",
+          "video": null,
+          "room": "oshxona",
+          "style": "neoklassika",
+          "hasBeforeAfter": false
+        },
+        {
+          "id": "proj-8",
+          "titleUz": "Zamonaviy parda loyihasi #8",
+          "titleRu": "Современный проект штор #8",
+          "image": "/media/projects/laparda5.jpg",
+          "originalHeic": "/media/projects/laparda5.HEIC",
+          "video": null,
+          "room": "ofis",
+          "style": "modern",
+          "hasBeforeAfter": false
+        },
+        {
+          "id": "proj-9",
+          "titleUz": "Zamonaviy parda loyihasi #9",
+          "titleRu": "Современный проект штор #9",
+          "image": "/media/projects/laparda8.jpg",
+          "originalHeic": "/media/projects/laparda8.HEIC",
+          "video": null,
+          "room": "mehmonxona",
+          "style": "minimalizm",
+          "hasBeforeAfter": false
+        },
+        {
+          "id": "proj-10",
+          "titleUz": "Zamonaviy parda loyihasi #10",
+          "titleRu": "Современный проект штор #10",
+          "image": "/media/projects/laparda9.jpg",
+          "originalHeic": "/media/projects/laparda9.HEIC",
+          "video": null,
+          "room": "yotoqxona",
+          "style": "neoklassika",
+          "hasBeforeAfter": false
+        },
+        {
+          "id": "proj-11",
+          "titleUz": "Zamonaviy parda loyihasi #11",
+          "titleRu": "Современный проект штор #11",
+          "image": "/media/projects/laparda1.jpg",
+          "originalHeic": "/media/projects/laprda1.HEIC",
+          "video": null,
+          "room": "oshxona",
+          "style": "modern",
+          "hasBeforeAfter": false
+        },
+        {
+          "id": "proj-12",
+          "titleUz": "Zamonaviy parda loyihasi #12",
+          "titleRu": "Современный проект штор #12",
+          "image": "/media/projects/laparda7.jpg",
+          "originalHeic": "/media/projects/laprda7.HEIC",
+          "video": null,
+          "room": "ofis",
+          "style": "minimalizm",
+          "hasBeforeAfter": false
+        }
+      ]
+    },
+    "videos": [
+      {
+        "id": "v1",
+        "src": "/media/videos/laparda6.MOV",
+        "poster": "/media/projects/laparda2.jpg",
+        "titleUz": "Parda o‘rnatish jarayoni",
+        "titleRu": "Процесс установки штор"
+      },
+      {
+        "id": "v2",
+        "src": "/media/videos/laparda10.MOV",
+        "poster": "/media/projects/laparda3.jpg",
+        "titleUz": "Premium parda tuly va portyera",
+        "titleRu": "Премиальные тюль и портьеры"
+      },
+      {
+        "id": "v3",
+        "src": "/media/videos/video1.MOV",
+        "poster": "/media/projects/laparda4.jpg",
+        "titleUz": "Dizaynerlik parda loyihasi",
+        "titleRu": "Дизайнерский проект штор"
+      },
+      {
+        "id": "v4",
+        "src": "/media/videos/video2.MOV",
+        "poster": "/media/projects/laparda5.jpg",
+        "titleUz": "Yotoqxona uchun blackout pardalar",
+        "titleRu": "Блэкаут шторы для спальни"
+      }
+    ],
+    "sewing": {
+      "banner": "/media/sewing/custom-tailoring.jpg",
+      "process": "/media/sewing/sewing-process.jpg",
+      "video": "/media/videos/video1.MOV",
+      "videoPoster": "/media/projects/laparda4.jpg"
+    },
+    "washing": {
+      "banner": "/media/washing/care-delicate.jpg",
+      "steam": "/media/washing/cleaning-steam.jpg",
+      "packaging": "/media/washing/packaging.jpg",
+      "video": "/media/videos/laparda10.MOV",
+      "videoPoster": "/media/projects/laparda3.jpg"
+    },
+    "installation": {
+      "banner": "/media/installation/cornice-mount.jpg",
+      "motorized": "/media/installation/motorized-curtains.jpg",
+      "ceilingRail": "/media/installation/ceiling-rail.jpg",
+      "video": "/media/videos/laparda6.MOV",
+      "videoPoster": "/media/projects/laparda2.jpg"
+    },
+    "fabrics": {
+      "banner": "/media/fabrics/fabric-velvet.jpg",
+      "sheer": "/media/fabrics/fabric-sheer.jpg",
+      "blackout": "/media/fabrics/fabric-blackout.jpg",
+      "linen": "/media/fabrics/textured-linen.jpg",
+      "video": "/media/videos/video2.MOV",
+      "videoPoster": "/media/projects/laparda5.jpg"
+    },
+    "about": {
+      "atelier": "/media/about/atelier-1.jpg",
+      "craftsmanship": "/media/about/craftsmanship.jpg",
+      "team": "/media/about/team.jpg",
+      "video": "/media/videos/video1.MOV",
+      "videoPoster": "/media/projects/laparda4.jpg"
+    },
+    "faq": {
+      "care": "/media/faq/curtain-care.jpg",
+      "measurement": "/media/faq/measurement-guide.jpg"
+    },
+    "contact": {
+      "showroom": "/media/contact/showroom.jpg",
+      "consultation": "/media/contact/consultation.jpg"
+    }
+  }
+}
